@@ -32,3 +32,33 @@ kubectl get no -o wide
 ```
 kubectl create namespace ns-00
 ```
+
+# Поднять бд postgresql
+Поднялось и заработало
+```
+cd ~
+mkdir app
+cd app
+wget -O ./postgresql-deployment.yml https://raw.githubusercontent.com/cldcdr42/W_for_wget/refs/heads/main/dep
+wget -O ./postgresql-service.yml https://raw.githubusercontent.com/cldcdr42/W_for_wget/refs/heads/main/ser
+
+nano postgresql-deployment.yml
+#        ПОМЕНЯТЬ "user" "password" "mydb"
+#             - name: POSTGRES_USER
+#              value: "user"
+#            - name: POSTGRES_PASSWORD
+#              value: "password"
+#            - name: POSTGRES_DB
+#              value: "mydb"
+#
+
+kubectl apply -f postgresql-deployment.yml -n ns-32
+kubectl apply -f postgresql-service.yml -n ns-32
+kubectl get pods -n ns-32
+```
+Проверка работы
+```
+kubectl get pods -n ns-32
+kubectl port-forward pod/<pod-name> 5432:5432 -n ns-32 &
+psql -h localhost -p 5432 -U <username> -d <database>
+```
