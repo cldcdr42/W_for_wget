@@ -18,6 +18,9 @@ rm $HOME/.kube/config
 
 sudo apt install ipvsadm
 sudo ipvsadm --clear
+
+sudo rm -rf /etc/cni/net.d/*flannel*
+sudo ip link delete flannel.1
 ```
 
 Скачать новый конфиг и подключиться
