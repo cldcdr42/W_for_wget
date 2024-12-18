@@ -34,7 +34,7 @@ kubectl create namespace ns-00
 ```
 
 # Поднять бд postgresql
-Поднялось и заработало
+БД поднялась самостоятельно и без ошибок
 ```
 cd ~
 mkdir app
@@ -50,7 +50,12 @@ nano postgresql-deployment.yml
 #              value: "password"
 #            - name: POSTGRES_DB
 #              value: "mydb"
-#
+#          ПОМЕНЯТЬ НА НУЖНУЮ ВЕРСИЮ
+#              image: postgres:17
+#                 ИЛИ
+#               image: postgres:13
+#                 ИЛИ
+#               ту, которую использовали вы
 
 kubectl apply -f postgresql-deployment.yml -n ns-32
 kubectl apply -f postgresql-service.yml -n ns-32
