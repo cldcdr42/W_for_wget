@@ -1,1 +1,2 @@
-ls -al
+sudo kubeadm join 172.16.1.34:6443 --token 543n7d.j8yp51d1zr1sbetl \
+  --discovery-token-ca-cert-hash sha256:a783e0fa2ff88d8ecf35c8c9e5c451234f6045a97a2a5a593d19a4b072902be9
