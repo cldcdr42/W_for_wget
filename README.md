@@ -65,13 +65,17 @@ nano postgresql-deployment.yml
 #                 ИЛИ
 #               ту, которую использовали вы
 
-kubectl apply -f postgresql-deployment.yml -n ns-32
-kubectl apply -f postgresql-service.yml -n ns-32
-kubectl get pods -n ns-32
+#
+# NAMESPACE ЗАМЕНИТЬ НА СВОЙ
+#
+
+kubectl apply -f postgresql-deployment.yml -n ns-00
+kubectl apply -f postgresql-service.yml -n ns-00
+kubectl get pods -n ns-00
 ```
-Проверка работы (<pod-name> <username> <database> заменить на свои)
+Проверка работы (ns-00, <pod-name> <username> <database> заменить на свои)
 ```
-kubectl get pods -n ns-32
-kubectl port-forward pod/<pod-name> 5432:5432 -n ns-32 &
+kubectl get pods -n ns-00
+kubectl port-forward pod/<pod-name> 5432:5432 -n ns-00 &
 psql -h localhost -p 5432 -U <username> -d <database>
 ```
