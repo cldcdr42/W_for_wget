@@ -51,6 +51,7 @@ wget -O ./postgresql-deployment.yml https://raw.githubusercontent.com/cldcdr42/W
 wget -O ./postgresql-service.yml https://raw.githubusercontent.com/cldcdr42/W_for_wget/refs/heads/main/ser
 
 nano postgresql-deployment.yml
+```
 #        ПОМЕНЯТЬ "user" "password" "mydb"
 #             - name: POSTGRES_USER
 #              value: "user"
@@ -69,6 +70,7 @@ nano postgresql-deployment.yml
 # NAMESPACE ЗАМЕНИТЬ НА СВОЙ
 #
 
+```
 kubectl apply -f postgresql-deployment.yml -n ns-00
 kubectl apply -f postgresql-service.yml -n ns-00
 kubectl get pods -n ns-00
