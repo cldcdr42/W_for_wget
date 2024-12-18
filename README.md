@@ -16,7 +16,7 @@ rm $HOME/.kube/config
 
 
 sudo apt install ipvsadm
-ipvsadm --clear
+sudo ipvsadm --clear
 ```
 
 Скачать новый конфиг и подключиться
