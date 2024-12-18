@@ -61,7 +61,7 @@ kubectl apply -f postgresql-deployment.yml -n ns-32
 kubectl apply -f postgresql-service.yml -n ns-32
 kubectl get pods -n ns-32
 ```
-Проверка работы
+Проверка работы (<pod-name> <username> <database> заменить на свои)
 ```
 kubectl get pods -n ns-32
 kubectl port-forward pod/<pod-name> 5432:5432 -n ns-32 &
