@@ -83,3 +83,17 @@ kubectl get pods -n ns-00
 kubectl port-forward pod/<pod-name> 5432:5432 -n ns-00 &
 psql -h localhost -p 5432 -U <username> -d <database>
 ```
+
+
+# Additional info
+which node runs my deploy
+```
+kubectl get pods -n ns-00 -l app=postgres -o wide
+```
+
+kill port forward
+```
+ps aux | grep "kubectl port-forward"
+# find line with port-forward and 5432
+kill <PID>
+```
