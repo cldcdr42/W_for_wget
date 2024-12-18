@@ -52,23 +52,24 @@ wget -O ./postgresql-service.yml https://raw.githubusercontent.com/cldcdr42/W_fo
 
 nano postgresql-deployment.yml
 ```
-ПОМЕНЯТЬ "user" "password" "mydb"
-             - name: POSTGRES_USER
-              value: "user"
-            - name: POSTGRES_PASSWORD
-              value: "password"
-            - name: POSTGRES_DB
-              value: "mydb"
-          ПОМЕНЯТЬ НА НУЖНУЮ ВЕРСИЮ
-              image: postgres:17
-                 ИЛИ
-               image: postgres:13
-                 ИЛИ
-               ту, которую использовали вы
+ПОМЕНЯТЬ "user" "password" "mydb"  
+- name: POSTGRES_USER  
+value: "user"  
+- name: POSTGRES_PASSWORD  
+value: "password"  
+- name: POSTGRES_DB  
+value: "mydb"  
+
+ПОМЕНЯТЬ НА НУЖНУЮ ВЕРСИЮ  
+image: postgres:17  
+   ИЛИ  
+image: postgres:13  
+   ИЛИ  
+ту, которую использовали вы  
 
 -----------------
 
- NAMESPACE ЗАМЕНИТЬ НА СВОЙ
+ NAMESPACE ЗАМЕНИТЬ НА СВОЙ  
 
 
 ```
