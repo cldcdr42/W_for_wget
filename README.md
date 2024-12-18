@@ -25,7 +25,7 @@ wget -O $HOME/.kube/join https://tinyurl.com/2puhekd2
 chmod +x $HOME/.kube/join
 $HOME/.kube/join
 
- kubectl get no -o wide 
+kubectl get no -o wide 
 ```
 Создать свой неймспейс (00 заменить на нужный номер)
 
