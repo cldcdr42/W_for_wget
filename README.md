@@ -13,6 +13,10 @@
 ```
 sudo kubeadm reset
 rm $HOME/.kube/config
+
+
+sudo apt install ipvsadm
+ipvsadm --clear
 ```
 
 Скачать новый конфиг и подключиться
