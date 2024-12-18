@@ -97,3 +97,13 @@ ps aux | grep "kubectl port-forward"
 # find line with port-forward and 5432
 kill <PID>
 ```
+
+Get nodes, status, ip
+```
+kubectl get nodes -o wide
+```
+
+Find 
+```
+
+```
