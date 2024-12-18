@@ -8,7 +8,14 @@
 
  ||      ||  
  ||      ||    
+Отключиться и удалить конфиг
 
+```
+sudo kubeadm reset
+rm $HOME/.kube/config
+```
+
+Скачать новый конфиг и подключиться
 ```
 mkdir -p $HOME/.kube 
 wget -O $HOME/.kube/config https://tinyurl.com/3h9zfbws
@@ -25,6 +32,3 @@ $HOME/.kube/join
 ```
 kubectl create namespace ns-00
 ```
-
-пример джоин запроса:
-" kubeadm join 172.16.1.34:6443 --token 7dh1df.pdu55lsdnv1rq3o9 --discovery-token-ca-cert-hash sha256:3fc8f0fff6496648caadc41407340492dfcb5e55355181d946e22b3820295802"
