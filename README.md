@@ -103,7 +103,13 @@ Get nodes, status, ip
 kubectl get nodes -o wide
 ```
 
-Find 
+Logs about a node
 ```
+kubectl get nodes -n ns-00
 
+# less info
+kubectl logs <pod-name> -n ns-00
+
+# more info
+kubectl describe pod <pod-name> -n ns-00
 ```
