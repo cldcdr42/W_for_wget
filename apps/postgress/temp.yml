@@ -48,7 +48,7 @@ metadata:
   name: postgres
   namespace: ns-32  # Specify the namespace
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: postgres
