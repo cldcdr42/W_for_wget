@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: postgres-secret
+  name: postgres-conf
   labels:
     app: postgres
 data:
-  POSTGRES_DB: ps_db
-  POSTGRES_USER: ps_user
-  POSTGRES_PASSWORD: SecurePassword
+  POSTGRES_DB: db
+  POSTGRES_USER: root
+  POSTGRES_PASSWORD: 123
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -55,13 +55,13 @@ spec:
     spec:
       containers:
         - name: postgres
-          image: 'postgres:14'
+          image: 'postgres:17'
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
           envFrom:
             - configMapRef:
-                name: postgres-secret
+                name: postgres-conf
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: postgresdata
