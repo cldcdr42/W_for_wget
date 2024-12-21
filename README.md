@@ -105,7 +105,7 @@ kubectl get nodes -o wide
 
 Logs about a node
 ```
-kubectl get nodes -n ns-00
+kubectl get pod -n ns-00
 
 # less info
 kubectl logs <pod-name> -n ns-00
