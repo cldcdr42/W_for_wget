@@ -113,3 +113,13 @@ kubectl logs <pod-name> -n ns-00
 # more info
 kubectl describe pod <pod-name> -n ns-00
 ```
+
+Delete pod
+```
+kubectl delete -f file.yml -n ns-00
+```
+or
+```
+kubectl get pods -n ns-00
+kubectl delete pod <name_of_the_pod> -n ns-00
+```
