@@ -81,6 +81,11 @@ kubectl get pods -n ns-00
 ```
 kubectl get pods -n ns-00
 kubectl port-forward pod/<pod-name> 5432:5432 -n ns-00 &
+
+# sudo apt install postgresql-client -y
+# if needed
+#
+
 psql -h localhost -p 5432 -U <username> -d <database>
 ```
 
