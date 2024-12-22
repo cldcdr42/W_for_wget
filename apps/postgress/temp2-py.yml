@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-app
+  namespace: ns-32
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: python-app
+  template:
+    metadata:
+      labels:
+        app: python-app
+    spec:
+      containers:
+      - name: python-app
+        image: cldcdr42/stop:latest
+        ports:
+        - containerPort: 5000
+        env:
+        - name: DB_HOST
+          value: "postgres"
+        - name: DB_PORT
+          value: "5432"
+        - name: POSTGRES_USER
+          value: "root"
+        - name: POSTGRES_PASSWORD
+          value: "123"
+        - name: POSTGRES_DB
+          value: "db"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: python-app
+  namespace: ns-32
+spec:
+  selector:
+    app: python-app
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
