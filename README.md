@@ -123,3 +123,9 @@ or
 kubectl get pods -n ns-00
 kubectl delete pod <name_of_the_pod> -n ns-00
 ```
+
+# When the app is running
+```
+kubectl port-forward svc/python-app 5000:5000 -n ns-32 &
+curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://localhost:5000/process
+```
