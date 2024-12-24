@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: <my_cool_domain.com>  # Replace with your desired domain name
+  - host: my_cool_domain.com  # Replace with your desired domain name
     http:
       paths:
       - path: /process
