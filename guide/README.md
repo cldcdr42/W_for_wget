@@ -14,7 +14,7 @@
   wget -O python.yml https://shorturl.at/iqxAS
   ```
 
-3) ОБЯЗАТЕЛЬНО заменить неймспейсы на свои  
+3) #ОБЯЗАТЕЛЬНО заменить неймспейсы на свои  
    В двух местах в файле postgres.yml  
    ```
    nano postgres.yml
