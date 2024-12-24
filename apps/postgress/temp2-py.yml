@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: python-app
+  name: python-app-dep
   namespace: ns-32
 spec:
   replicas: 1
@@ -33,7 +33,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: python-app
+  name: python-app-svc
   namespace: ns-32
 spec:
   selector:
