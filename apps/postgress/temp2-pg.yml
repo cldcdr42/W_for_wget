@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres-dep
-  namespace: ns-32
+  namespace: ns-32 # Неймспейс - менять обязательно
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: postgres
-        image: docker.io/postgres:latest
+        image: docker.io/postgres:latest 
         env:
         - name: POSTGRES_DB
           value: "db"
@@ -30,7 +30,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: postgres-svc
-  namespace: ns-32
+  namespace: ns-32 # Неймспейс - менять обязательно
 spec:
   selector:
     app: postgres
