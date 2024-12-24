@@ -84,21 +84,47 @@ cd ~ && mkdir app && cd app
 
 
 # Для галки за ингресы (ING)
-1) Узнать ip
+
+1) Скачать конфигурацию ингресса
+```
+wget -O ingress.yml https://shorturl.at/zt2mX
+```
+
+2) Заменить в файле ингреса строку namespace: ns-32 на свою, вместо <my-cool-domain.com> указать любой выдуманный домен
+```
+nano ingress.yml
+```
+
+Заменить домен на свой. Вместо my_cool_domain.com можно использовать что угодно, например, test1234.ru; helloworld; hepl111.com
+```
+host: my_cool_domain.com
+```
+CTRL+x, y, Enter
+
+3) Запустить ингресс. Заменить ns-<xx> на свой
+```
+kubectl apply -f ingress.yml -n ns-<xx>
+```
+
+3.5) Дождаться запуска, проверить
+```
+kubectl get ingress -n ns-<xx>
+```
+
+3) Узнать ip
 ```
 kubectl het svc -n haproxy-controller
 ```
 Должен быть 10.98.8.45
 
-2) Добавить ip и доменное имя
+4) Добавить ip (найден прошлой командой). Замените my_cool_domain.com на то, что придумали в файле ingress.yml
 ```
 sudo nano /etc/hosts
-10.98.8.45 <my_cool_domain.com>
+10.98.8.45 my_cool_domain.com
 ```
-Вместо <my_cool_domain.com> можно использовать что угодно, например, test1234.ru; helloworld; hepl111.com
+CTRL+x, y, Enter
 
-3) Скачать конфигурацию ингресса
+5) Выполните запрос
 ```
-wget -O ingress.yml https://shorturl.at/zt2mX
+curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-cool-domain.com/process
 ```
-4)  
