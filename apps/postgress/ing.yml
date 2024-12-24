@@ -2,18 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: python-app-ingress
-  namespace: ns-32  # Specify your namespace
+  namespace: ns-32 # Неймспейс - менять обязательно
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: my_cool_domain.com  # Replace with your desired domain name
+  - host: my_cool_domain.com  # Указать желаемый используемый домен
     http:
       paths:
       - path: /process
         pathType: Prefix
         backend:
           service:
-            name: python-app-svc  # Name of your Python app service
+            name: python-app-svc  # Указать название своего сервиса ## kubectl get svc -n ns-<xx>
             port:
-              number: 5000  # Port exposed by your Python app service
+              number: 5000
