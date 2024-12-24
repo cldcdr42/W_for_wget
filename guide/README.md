@@ -67,7 +67,7 @@ cd ~ && mkdir app && cd app
    ```
    curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://localhost:5000/process
    ```
-   В случае успехом должно появиться сообщение (Если ввели число X)
+   В случае успеха должно появиться сообщение (Если ввели число X)
    ```
    "Response: {X + 1}. Number {X} has been added to the database."
    ```
@@ -106,7 +106,7 @@ CTRL+x, y, Enter
 kubectl apply -f ingress.yml -n ns-<xx>
 ```
 
-3.5) Дождаться запуска, проверить
+3.5) Проверить ингресс можно командой ниже. Заменить ns-<xx> на свой
 ```
 kubectl get ingress -n ns-<xx>
 ```
@@ -124,7 +124,23 @@ sudo nano /etc/hosts
 ```
 CTRL+x, y, Enter
 
-5) Выполните запрос
+5) Выполните запрос. Вместо my-cool-domain.com написать тот домен, который вы указывали раньше.
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-cool-domain.com/process
 ```
+При успешном выполнении должен быть текст, как и при первом curl-запросе:
+
+   В случае успеха должно появиться сообщение (Если ввели число X)
+   ```
+   "Response: {X + 1}. Number {X} has been added to the database."
+   ```
+   Если до демонстрации уже добавляли числа, возможны два других ответа:
+   ```
+   Number {X} is already in the database (case 1)
+   ```
+   ИЛИ
+   ```
+   Number {num + 1} is already in the database (case 2)
+   ```
+   Если ответа нет в принципе, то все плохо
+   Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
