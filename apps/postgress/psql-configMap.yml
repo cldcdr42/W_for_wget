@@ -1,9 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: postgres-config
-  namespace: ns-32
-data:
-  POSTGRES_DB: db
-  POSTGRES_USER: root
-  POSTGRES_PASSWORD: 123
