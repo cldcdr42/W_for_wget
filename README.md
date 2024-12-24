@@ -156,7 +156,7 @@ wget -O postgres.yml https://shorturl.at/oHfxZ
 wget -O python.yml https://shorturl.at/iqxAS
 ```
 
-3) ОБЯЗАТЕЛЬНО заменить неймспейсы на свои
+3) ОБЯЗАТЕЛЬНО заменить неймспейсы на свои  
    В двух местах в файле postgres.yml  
    ```
    nano postgres.yml
@@ -206,3 +206,4 @@ wget -O python.yml https://shorturl.at/iqxAS
    Number {num + 1} is already in the database (case 2)
    ```
    Если ответа нет в принципе, то все плохо
+   Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
