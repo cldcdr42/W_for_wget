@@ -144,17 +144,17 @@ kubectl exec -it <pod-name> -n ns-32 -- bash
  На основе моего хода решения:
 
 1) Создадим папки, куда будем хранить файлы
-
-```
-cd ~ && mkdir app && cd app
-```
+ 
+  ```
+  cd ~ && mkdir app && cd app
+  ```
 
 2) скачать конфигурации базы данных и приложения для запуска в кластере
   
-```
-wget -O postgres.yml https://shorturl.at/oHfxZ
-wget -O python.yml https://shorturl.at/iqxAS
-```
+  ```
+  wget -O postgres.yml https://shorturl.at/oHfxZ
+  wget -O python.yml https://shorturl.at/iqxAS
+  ```
 
 3) ОБЯЗАТЕЛЬНО заменить неймспейсы на свои  
    В двух местах в файле postgres.yml  
