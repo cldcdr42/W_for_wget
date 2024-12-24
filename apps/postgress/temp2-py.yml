@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: python-app-dep
-  namespace: ns-32
+  namespace: ns-32 # Неймспейс - менять обязательно
 spec:
   replicas: 1
   selector:
@@ -34,7 +34,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: python-app-svc
-  namespace: ns-32
+  namespace: ns-32 # Неймспейс - менять обязательно
 spec:
   selector:
     app: python-app
