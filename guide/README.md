@@ -6,17 +6,17 @@
 
 
  
- # Что-то не работает? Повторите все выполненные команды `wget -O <file> <url>` и `kubectl apply -f <file> -n ns-<ab>`
+ # Что-то не работает? Повторите все выполненные команды `wget -O <file> <url>` и `kubectl apply -f <file> -n ns-<xx>`
  # Для информация об ошибках используйте
  ```
- # получить список моих подов, ns-xx заменить на свой
- kubectl get pods -n ns-xx
+ # получить список моих подов, ns-<xx> заменить на свой
+ kubectl get pods -n ns-<xx>
 
  # получить статус подов
- kubectl describe pod <podname> -n ns-xx
+ kubectl describe pod <podname> -n ns-<xx>
 
  # получить инфомрацию о работе программ внутри подов
- kubectl logs <podname> -n ns-xx
+ kubectl logs <podname> -n ns-<xx>
  ```
  
  На основе моего хода решения:
@@ -114,7 +114,8 @@ nano ingress.yml
 ```
 host: my_cool_domain.com
 ```
-CTRL+x, y, Enter
+
+Работа с файлом завершена, сохраняем: CTRL+x, y, Enter
 
 3) Запустить ингресс. Заменить ns-<xx> на свой
 ```
