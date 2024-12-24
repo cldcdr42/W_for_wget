@@ -196,6 +196,7 @@ sudo ip route add <IP_DOCKER_1> via <DEFAULT_IP>
 
 Как правило, изменения заключаются в:
 
-Пример конфига для бд postgres (postgres.yml): https://shorturl.at/oHfxZ
-Пример конфига для приложения на пайтоне (python.yml): https://shorturl.at/iqxAS
-Пример конфига для ингреса (порт 5000 у приложения на пайтоне) (ingress.yml): https://shorturl.at/zt2mX
+Примеры файлов с конфигурацией:  
+1) бд postgres (postgres.yml): https://shorturl.at/oHfxZ
+2) приложения на пайтоне (flask) (python.yml): https://shorturl.at/iqxAS
+3) Ингрес (ingress.yml): https://shorturl.at/zt2mX
