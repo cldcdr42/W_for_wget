@@ -200,6 +200,6 @@ sudo ip route add <IP_DOCKER_1> via <DEFAULT_IP>
 3) Для ингреса: указать свой хост-нейм, указать свой путь (хвостик REST), указать имя своего сервиса (см yml файл приложения, раздел Service), указать используемый порт
 
 Примеры файлов с конфигурацией:  
-1) бд postgres (postgres.yml): https://shorturl.at/oHfxZ
+1) бд postgres (postgres.yml): https://shorturl.at/oHfxZ [url](https://github.com/cldcdr42/W_for_wget/blob/main/apps/postgress/temp2-pg.yml)
 2) приложения на пайтоне (flask) (python.yml): https://shorturl.at/iqxAS
 3) Ингрес (ingress.yml): https://shorturl.at/zt2mX
