@@ -7,6 +7,7 @@
  ```
  # получить список моих подов, ns-<xx> заменить на свой
  kubectl get pods -n ns-<xx>
+ # пример названия пода: postgres-dep-32dw1jd98a-wda2d
 
  # получить статус подов
  kubectl describe pod <podname> -n ns-<xx>
