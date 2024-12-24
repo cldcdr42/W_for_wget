@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: python-app
-        image: cldcdr42/stop:latest
+        image: docker.io/cldcdr42/stop:latest
         ports:
         - containerPort: 5000
         env:
