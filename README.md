@@ -178,6 +178,7 @@ kubectl exec -it <pod-name> -n ns-32 -- bash
    kubectl apply -f postgres.yml -n ns-<xx>
    kubectl apply -f python.yml -n ns-<xx>
    ```
+   Рекомендую сначала дождаться запуска (Running) БД, затем - начинать команду запуска приложения
 
 5) Дождаться момента, когда все поды получат статус Running (ns-<xx> заменить на свой)
    ```
