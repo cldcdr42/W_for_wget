@@ -72,3 +72,23 @@ cd ~ && mkdir app && cd app
    Если ответа нет в принципе, то все плохо
    Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
 
+
+# Для галки за ингресы (ING)
+1) Узнать ip
+```
+kubectl het svc -n haproxy-controller
+```
+Должен быть 10.98.8.45
+
+2) Добавить ip и доменное имя
+```
+sudo nano /etc/hosts
+10.98.8.45 <my_cool_domain.com>
+```
+Вместо <my_cool_domain.com> можно использовать что угодно, например, test1234.ru; helloworld; hepl111.com
+
+3) Скачать конфигурацию ингресса
+```
+wget -O ingress.yml https://shorturl.at/zt2mX
+```
+4)  
