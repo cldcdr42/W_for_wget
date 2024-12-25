@@ -170,7 +170,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-co
    ```
    Number {X + 1} is already in the database (case 2)
    ```
-   Если ответа нет в принципе, то все плохо
+   Если ответа нет в принципе, то все плохо. Можете попробовать пингануть под приложения, чтобы проверить, можно ли достучаться до него: `kubectl get pods -n ns-<xx> -o wide`, найти ip своего пода, `ping <ip.of.your.pod>`  
+   
+   ---
    Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
 
 # Ошибка лимита пулов в докерхаб
