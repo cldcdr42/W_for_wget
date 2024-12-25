@@ -123,9 +123,14 @@ cd ~ && mkdir app && cd app
 wget -O ingress.yml https://shorturl.at/zt2mX
 ```
 
-2) Заменить в файле ингреса строку namespace: ns-32 на свою, вместо <my-cool-domain.com> указать любой выдуманный домен
+2) Открыть файл кофигурации
 ```
 nano ingress.yml
+```
+
+Заменить в файле ингреса строку namespace: ns-32 на свою
+```
+namespace: ns-32
 ```
 
 Заменить домен на свой. Вместо my_cool_domain.com можно использовать что угодно, например, test1234.ru; helloworld; hepl111.com
