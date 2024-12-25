@@ -140,25 +140,25 @@ host: my_cool_domain.com
 kubectl apply -f ingress.yml -n ns-<xx>
 ```
 
-3.5) Проверить ингресс можно командой ниже. Заменить ns-<xx> на свой
+Проверить ингресс можно командой ниже. Заменить ns-<xx> на свой
 ```
 kubectl get ingress -n ns-<xx>
 ```
 
-3) Узнать ip
+4) Узнать ip
 ```
-kubectl het svc -n haproxy-controller
+kubectl get svc -n haproxy-controller
 ```
 Должен быть 10.98.8.45
 
-4) Добавить ip (найден прошлой командой). Замените my_cool_domain.com на то, что придумали в файле ingress.yml
+5) Добавить ip (найден прошлой командой). Замените my_cool_domain.com на то, что придумали в файле ingress.yml
 ```
 sudo nano /etc/hosts
 10.98.8.45 my_cool_domain.com
 ```
 CTRL+x, y, Enter
 
-5) Выполните запрос. Вместо my-cool-domain.com написать тот домен, который вы указывали раньше.
+6) Выполните запрос. Вместо my-cool-domain.com написать тот домен, который вы указывали раньше.
 ```
 curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-cool-domain.com/process
 ```
