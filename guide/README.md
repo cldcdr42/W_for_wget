@@ -178,8 +178,8 @@ curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-co
    Этого достаточно для получения галочки за ING
 
 # Ошибка лимита пулов в докерхаб
-0) [Опционально, если на 1 шаге возникли проблемы] sudo apt update && sudo apt upgrade -y
-1) `sudo apt install dnsutils -y && sudo apt install traceroute -y`
+0) [Опционально, если на 1 шаге возникли проблемы] `sudo apt update && sudo apt upgrade -y`
+1) `sudo apt install dnsutils traceroute -y`
 2) `nslookup index.docker.io`
 3) Записать все ipv4 (У меня, например, так {у вас могут отличаться}): 54.198.86.24. 54.236.113.205, 54.227.20.253). Айпи с буквами (abcf) игнорировать
 4) `ip route | grep default`  
