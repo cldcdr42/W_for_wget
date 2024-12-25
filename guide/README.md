@@ -179,18 +179,20 @@ curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-co
 
 # Ошибка лимита пулов в докерхаб
 0) [Опционально, если на 1 шаге возникли проблемы] sudo apt update && sudo apt upgrade -y
-1) sudo apt install dnsutils -y && sudo apt install traceroute -y
-2) nslookup index.docker.io
+1) `sudo apt install dnsutils -y && sudo apt install traceroute -y`
+2) `nslookup index.docker.io`
 3) Записать все ipv4 (У меня, например, так {у вас могут отличаться}): 54.198.86.24. 54.236.113.205, 54.227.20.253). Айпи с буквами (abcf) игнорировать
-4) ip route | grep default  
+4) `ip route | grep default`  
 Найти свой айпи (например, 192.168.0.1)
-5) traceroute index.docker.io  
+5) `traceroute index.docker.io`  
 Заскринить результаты
 6) Подставить сюда айпи докера и свое дефолт айпи и выполнить команды   
+```
 sudo ip route add <IP_DOCKER_1> via <DEFAULT_IP>  
 sudo ip route add <IP_DOCKER_1> via <DEFAULT_IP>  
 sudo ip route add <IP_DOCKER_1> via <DEFAULT_IP>
-7) traceroute index.docker.io  
+```
+7) `traceroute index.docker.io`  
 Заскринить результаты. Сравнить с пунктом 5. Если последовательности адресов отличаются, то все ок
 8) Delete, apply, посмотреть, загрузится файл или нет
 
