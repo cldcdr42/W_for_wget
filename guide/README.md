@@ -182,6 +182,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-co
    Этого достаточно для получения галочки за ING
 
 # Ошибка лимита пулов в докерхаб
+Возникает, если слишком большое количество пул запросов поступает на докерхаб с одного IP. Решается путем перенаправления трафика на докерхаб не через впн, а свою машину
 0) [Опционально, если на 1 шаге возникли проблемы] `sudo apt update && sudo apt upgrade -y`
 1) `sudo apt install dnsutils traceroute -y`
 2) `nslookup index.docker.io`
