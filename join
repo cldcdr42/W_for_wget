@@ -1,1 +1,1 @@
-kubeadm join 172.16.1.34:6443 --token hfvigq.sw48a6u7wfh3pd7d --discovery-token-ca-cert-hash sha256:1a579ba9d3aa44150e2b924811d337f1bdb1de6965001ee4d22b0ce37f773e31
+kubeadm join 172.16.1.34:6443 --token myd2cn.kpr3rnedtwm2xgik --discovery-token-ca-cert-hash sha256:1a579ba9d3aa44150e2b924811d337f1bdb1de6965001ee4d22b0ce37f773e31
