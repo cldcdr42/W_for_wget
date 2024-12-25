@@ -104,7 +104,7 @@ cd ~ && mkdir app && cd app
    ```
    ИЛИ
    ```
-   Number {num + 1} is already in the database (case 2)
+   Number {X + 1} is already in the database (case 2)
    ```
    Если ответа нет в принципе, то все плохо
    Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
@@ -168,7 +168,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"number": 1}' http://my-co
    ```
    ИЛИ
    ```
-   Number {num + 1} is already in the database (case 2)
+   Number {X + 1} is already in the database (case 2)
    ```
    Если ответа нет в принципе, то все плохо
    Этого достаточно для получения галочек ENV, Docker, REST, kube, db (5 штук)
